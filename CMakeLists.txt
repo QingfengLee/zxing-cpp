@@ -6,6 +6,9 @@ option(BUILD_TESTING "Enable generation of test targets" OFF)
 
 set(CMAKE_LIBRARY_PATH /opt/local/lib ${CMAKE_LIBRARY_PATH})
 
+set( CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -Wall --std=c++11 -O3 -fPIC" )
+set( CMAKE_C_FLAGS  "${CMAKE_C_FLAGS} -Wall -O3 -fPIC" )
+
 # Check for polluted source tree.
 if(EXISTS ${CMAKE_SOURCE_DIR}/CMakeCache.txt OR
     EXISTS ${CMAKE_SOURCE_DIR}/CMakeFiles)
